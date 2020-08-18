@@ -2,10 +2,10 @@
   <q-layout view="hHh lpR fFf">
 
     <q-header elevated class="bg-primary text-white" height-hint="98">
-      <q-toolbar>
+      <q-toolbar >
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+            <img src="../assets/heartLogo.png">
           </q-avatar>
           Sistema de registro de citas
         </q-toolbar-title>
@@ -44,7 +44,7 @@
         <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
           <div class="absolute-bottom bg-transparent">
             <q-avatar size="56px" class="q-mb-sm">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="../assets/Mgoof.png">
             </q-avatar>
             <div class="text-weight-bold">Invitado</div>
             <div>@...</div>
@@ -60,7 +60,7 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
-            <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
+            <img src="../assets/heartLogo.png">
           </q-avatar>
           Title
         </q-toolbar-title>

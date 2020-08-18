@@ -39,6 +39,7 @@
         <q-item-section>
           <q-item-label>{{item.Fecha}}</q-item-label>
         </q-item-section>
+
         <q-item-section>
           <q-item-label>{{item.Hora}}</q-item-label>
         </q-item-section>
@@ -57,7 +58,7 @@
 </template>
 
 <script>
-import { db } from '@/firebase';
+import { db } from '../boot/firebase.js'
 export default {
   name: 'citas',
   data () {
@@ -100,14 +101,16 @@ export default {
     }
   },
   mounted () {
-    db.collection("citas").doc(this.$route.params.id).get()
-    .then(datos => {
-      const miCita = datos.data();
-      this.Nombre = miCita.Nombre,
-      this.Sintoma = miCita.Asunto,
-      this.Fecha = miCita.Fecha,
-      this.Hora = miCita.Hora
-    })
+    db.collection('citas').doc(this.$route.params.id).get()
+      .then(datos => {
+        const miCita = datos.data()
+
+        // this.Nombre = miCita.Nombre,
+        // this.Sintoma = miCita.Sintoma,
+        // this.Fecha = miCita.Fecha,
+        // this.Hora = miCita.Hora,
+        console.log(miCita)
+      })
   }
 }
 </script>

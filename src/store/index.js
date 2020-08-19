@@ -28,9 +28,11 @@ export default function () {
     },
     mutations: {
       setUser (state, newUser) {
+        console.log('error user')
         state.User = newUser
       },
       setError (state, newError) {
+        console.log('error error')
         state.error = newError
       }
     },
@@ -61,10 +63,9 @@ export default function () {
           .auth()
           .signInWithEmailAndPassword(datos.email, datos.password)
           .then(response => {
-            console.log(response)
             context.commit('setError', null)
             context.commit('setUser', response.user)
-            router.push('/citas')
+            this.$router.push({ path: '/citas' })
           })
           .catch(error => {
             context.commit('setError', error.message)
@@ -80,12 +81,12 @@ export default function () {
             context.commit('setUser', null)
           })
       }
-    },
+    }
 
     // enable strict mode (adds overhead!)
     // for dev mode only
-    strict: process.env.DEV
   })
 
   return Store
 }
+export const strict = false

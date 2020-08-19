@@ -58,7 +58,7 @@
 </template>
 
 <script>
-// import { db } from '@/firebase';
+import { db } from '../boot/firebase.js'
 export default {
   name: 'citas',
   data () {
@@ -83,6 +83,11 @@ export default {
           Sintoma: 'Dolores'
         }
       ]
+    }
+  },
+  firestore () {
+    return {
+      citas: db.collection('citas')
     }
   },
   methods: {

@@ -14,10 +14,6 @@
             <p class="text-weight-bolder text-grey">Login to your account</p>
           </q-card-section>
           <q-card-section>
-            <q-btn v-if="!loggedIn">LogIn</q-btn>
-            <q-btn v-else @click="logoutUser">Logout</q-btn>
-            <q-btn v-if="!loggedIn">LogUp</q-btn>
-            {{loggedIn}}
             <q-form @submit.prevent="LogIn" class="q-gutter-md" >
               <q-input dark dense square filled clearable v-model="email" type="email" label="Email">
                 <template v-slot:prepend>
@@ -47,18 +43,17 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+// import { mapActions, mapState } from 'vuex'
 export default {
   name: 'Login',
   data () {
     return {
       email: '',
-      username: '',
       password: ''
     }
   },
   methods: {
-    ...mapActions('auth', ['loginUser', 'logoutUser']),
+    /* ...mapActions('auth', ['loginUser', 'logoutUser']),
     submitForm () {
       console.log('funciona form')
       this.loginUser(this.formData)
@@ -66,6 +61,11 @@ export default {
   },
   computed: {
     ...mapState('auth', ['loggedIn'])
+  } */
+    LogIn () {
+      const datosLogIn = { email: this.email, password: this.password }
+      this.$store.dispatch('logIn', datosLogIn)
+    }
   }
 }
 </script>

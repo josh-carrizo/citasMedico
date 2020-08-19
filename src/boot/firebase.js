@@ -1,7 +1,7 @@
-import * as firebase from "firebase/app"
+import * as firebase from 'firebase/app'
 
-import "firebase/firestore"
-import "firebase/auth"
+import 'firebase/firestore'
+import 'firebase/auth'
 
 var firebaseConfig = {
   VUE_APP_APIKEY: 'AIzaSyCg40m3-NSQML-6YvOZhcXS6LZ2pfSZTt8',
@@ -15,8 +15,8 @@ var firebaseConfig = {
   VUE_APP_APPID: '1:734250210148:web:ae80a0ac66415bcb3ea071'
 }
 
-let firebaseApp = firebase.initializeApp(firebaseConfig)
-let firebaseAuth = firebaseApp.auth()
-let db = firebase.firestore();
+const firebaseApp = firebase.initializeApp(firebaseConfig)
+const firebaseAuth = firebaseApp.auth()
+const db = firebase.firestore()
 
 export { firebaseAuth, db }

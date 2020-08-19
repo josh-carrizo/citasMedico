@@ -1,6 +1,7 @@
 <template>
     <div class="q-pa-md">
         <div class="q-gutter-sm">
+          <h2>Bienvenido </h2>
         <div class="q-gutter-md row items-start" >
             <q-date v-model="model" mask="DD-MM-YYYY HH:mm" color="purple" />
             <q-time v-model="model" mask="DD-MM-YYYY HH:mm" color="purple" />

@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { db } from '@/firebase';
+// import { db } from '@/firebase';
 export default {
   name: 'citas',
   data () {
@@ -98,7 +98,8 @@ export default {
         this.$q.notify('El item ha sido eliminado')
       })
     }
-  },
+  }
+  /* ,
   mounted () {
     db.collection("citas").doc(this.$route.params.id).get()
     .then(datos => {
@@ -108,6 +109,6 @@ export default {
       this.Fecha = miCita.Fecha,
       this.Hora = miCita.Hora
     })
-  }
+  } */
 }
 </script>

@@ -1,4 +1,4 @@
-import {firebaseAuth} from 'boot/firebase'
+/* import {firebaseAuth} from 'boot/firebase'
 
 export default ({router}) => {
   router.beforeEach((to, next) => {
@@ -8,7 +8,7 @@ export default ({router}) => {
       }else{
         // console.log(loggedIn);
         next()
-      }    
+      }
     })
   })
-}
+} */

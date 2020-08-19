@@ -21,12 +21,12 @@
                   <q-icon name="email" />
                 </template>
               </q-input>
-              <q-input dark dense square filled clearable v-model="RepeatPassword" type="password" label="Repeat your Password">
+              <q-input dark dense square filled clearable v-model="RepeatPassword" type="password" label="Password">
                 <template v-slot:prepend>
                   <q-icon name="lock" />
                 </template>
               </q-input>
-              <q-input dark dense square filled clearable v-model="password" type="password" label="Password">
+              <q-input dark dense square filled clearable v-model="password" type="password" label="Repeat your Password">
                 <template v-slot:prepend>
                   <q-icon name="lock" />
                 </template>

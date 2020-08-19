@@ -39,6 +39,7 @@
         <q-item-section>
           <q-item-label>{{item.Fecha}}</q-item-label>
         </q-item-section>
+
         <q-item-section>
           <q-item-label>{{item.Hora}}</q-item-label>
         </q-item-section>

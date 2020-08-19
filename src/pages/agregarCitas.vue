@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="q-pa-md">
         <div class="q-gutter-sm">
           <h2>Bienvenido </h2>
